@@ -1,0 +1,18 @@
+# Node.js
+node_modules/
+
+# Webpack
+dist/
+
+# Ambiente
+.env
+
+# Sistema operativo
+.DS_Store
+
+# Editor
+.idea/
+.vscode/
+
+# Altri file temporanei
+*.log
