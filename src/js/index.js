@@ -1,4 +1,3 @@
-import '../css/styles.css';
-import '../js/app';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import '../css/styles.css'; // CSS personalizzato
+import 'bootstrap/dist/css/bootstrap.min.css'; // CSS Bootstrap
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // JS Bootstrap
