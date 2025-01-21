@@ -140,10 +140,6 @@ header.masthead h1, header.masthead .h1 {
 }
 
 
-.text-white-75 {
-  color: rgba(255, 255, 255, 0.75) !important;
-}
-
 a {
   text-decoration: underline;
 }
@@ -212,18 +208,18 @@ a {
 
 .btn:hover {
   color: var(--bs-btn-hover-color);
-  background-color: #cf5331;
+  background-color: #551402;
   border-color: var(--bs-btn-hover-border-color);
 }
 
 /*home*/
 .page-section-home {
   padding: 8rem 0;
-  background-color: #f4623a;
+  background-color: #c34e2e;;
 }
 
 .text-white-75 {
-  color: rgba(255, 255, 255, 0.75) !important;
+  color: #fff !important;
   font-size: 20px;
 }
 
