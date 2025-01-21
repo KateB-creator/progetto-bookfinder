@@ -283,12 +283,12 @@ a {
 
 /*ricerca libro*/
 .card {
-  max-width: 250px; /* Limita la larghezza massima della card */
+  max-width: 350px; /* Limita la larghezza massima della card */
   margin: 10px; /* Distanza tra le card */
 }
 
 .card-img-top {
-  max-height: 200px; /* Limita l'altezza dell'immagine */
+  max-height: 300px; /* Limita l'altezza dell'immagine */
   object-fit: cover; /* Assicura che l'immagine si adatti senza distorcere */
 }
 
@@ -300,16 +300,16 @@ a {
   padding: 20px 20px 62px 20px;
 }
 .card-body2 {
-  padding: 20px 20px 62px 20px;
+  padding: 20px 20px 95px 20px;
 }
 
 
 .card-title {
-  font-size: 1rem;
+  font-size: 24px;
 }
 
 .card-text {
-  font-size: 0.9rem; 
+  font-size: 18px;; 
 }
 
 .btn {
