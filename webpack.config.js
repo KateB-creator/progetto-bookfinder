@@ -1,7 +1,7 @@
 const path = require('path');
 const dotenv = require('dotenv');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin'); 
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 // Carica il file .env
 dotenv.config();
@@ -11,27 +11,27 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true, // Pulisce automaticamente la cartella dist
+    clean: true,
   },
   module: {
     rules: [
       {
         test: /\.css$/i,
         use: [
-          MiniCssExtractPlugin.loader, // Estrae il CSS in un file separato
-          'css-loader', // Interpreta i file CSS
+          MiniCssExtractPlugin.loader,
+          'css-loader',
         ],
       },
       {
-        test: /\.(jpg|jpeg|png|gif|svg)$/i,
-        type: 'asset/resource', // Gestisce i file immagine come asset
+        test: /\.(jpg|jpeg|png|gif|svg|webp)$/i,
+        type: 'asset/resource',
         generator: {
-          filename: 'img/[name].[hash][ext]', // Salva le immagini nella cartella img con un nome unico
+          filename: 'img/[name].[hash][ext]', // Salva le immagini nella cartella dist/img
         },
       },
       {
         test: /\.html$/i,
-        loader: 'html-loader', // Processa le immagini nei file HTML
+        loader: 'html-loader',
         options: {
           sources: {
             list: [
@@ -48,15 +48,12 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html', // File HTML di origine
+      template: './src/index.html',
       inject: 'body',
-      favicon: './src/img/favicon.svg', // Specifica la favicon
-      meta: {
-        'og:image': 'https://raw.githubusercontent.com/KateB-creator/progetto-bookfinder/refs/heads/main/bookfinder_og_img.png',
-      },
+      favicon: './src/img/favicon.svg',
     }),
     new MiniCssExtractPlugin({
-      filename: 'styles.css', // Nome del file CSS generato
+      filename: 'styles.css',
     }),
   ],
   devServer: {
@@ -64,8 +61,8 @@ module.exports = {
       directory: path.join(__dirname, 'dist'),
     },
     compress: true,
-    port: 3000, // Porta del server locale
-    open: true, // Apre automaticamente il browser
+    port: 3000,
+    open: true,
   },
-  mode: 'development', // Imposta la modalità di sviluppo
+  mode: 'development',
 };
