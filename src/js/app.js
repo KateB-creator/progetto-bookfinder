@@ -57,17 +57,17 @@ const displayResults = (books) => {
     // Aggiungi il listener per aggiungere ai preferiti
     bookElement.querySelector('.add-to-favorites-btn').onclick = () => {
       const bookDetails = {
-        id: book.key, // Usa l'ID univoco del libro
+        id: book.key, 
         title: book.title,
         author: book.author_name ? book.author_name.join(', ') : 'Autore sconosciuto'
       };
-      addToFavorites(bookDetails); // Aggiungi il libro ai preferiti
+      addToFavorites(bookDetails); 
     };
 
-    row.appendChild(bookElement); // Aggiungi ogni card alla riga
+    row.appendChild(bookElement); 
   });
 
-  resultsContainer.appendChild(row); // Aggiungi la riga al container
+  resultsContainer.appendChild(row); 
 };
 
 // Funzione per caricare i libri preferiti dal localStorage
