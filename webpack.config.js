@@ -24,9 +24,24 @@ module.exports = {
       },
       {
         test: /\.(jpg|jpeg|png|gif|svg)$/i,
-        type: 'asset/resource', // Sostituisce file-loader in Webpack 5
+        type: 'asset/resource', // Gestisce i file immagine come asset
         generator: {
           filename: 'img/[name].[hash][ext]', // Salva le immagini nella cartella img con un nome unico
+        },
+      },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader', // Processa le immagini nei file HTML
+        options: {
+          sources: {
+            list: [
+              {
+                tag: 'img',
+                attribute: 'src',
+                type: 'src',
+              },
+            ],
+          },
         },
       },
     ],
