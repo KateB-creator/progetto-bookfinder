@@ -51,6 +51,9 @@ module.exports = {
       template: './src/index.html', // File HTML di origine
       inject: 'body',
       favicon: './src/img/favicon.svg', // Specifica la favicon
+      meta: {
+        'og:image': 'https://raw.githubusercontent.com/KateB-creator/progetto-bookfinder/refs/heads/main/bookfinder_og_img.png',
+      },
     }),
     new MiniCssExtractPlugin({
       filename: 'styles.css', // Nome del file CSS generato
